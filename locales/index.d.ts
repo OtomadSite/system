@@ -1543,11 +1543,11 @@ export interface Locale extends ILocale {
      */
     "disconnectService": string;
     /**
-     * ローカル・タイムラインを有効にする
+     * 全体タイムラインを有効にする
      */
     "enableLocalTimeline": string;
     /**
-     * グローバル・タイムラインを有効にする
+     * 連合タイムラインを有効にする
      */
     "enableGlobalTimeline": string;
     /**
@@ -3091,7 +3091,7 @@ export interface Locale extends ILocale {
      */
     "noCrawleDescription": string;
     /**
-     * フォローを承認制にしても、ノートの公開範囲を「フォロワー」にしない限り、誰でもあなたのノートを見ることができます。
+     * フォローを承認制にしても、ノートをフォロワー限定公開にしない限り、誰でもあなたのノートを見ることができます。
      */
     "lockedAccountInfo": string;
     /**
@@ -4255,7 +4255,7 @@ export interface Locale extends ILocale {
      */
     "thisPostMayBeAnnoying": string;
     /**
-     * ホームに投稿
+     * 耳打ち公開で投稿
      */
     "thisPostMayBeAnnoyingHome": string;
     /**
@@ -4299,15 +4299,15 @@ export interface Locale extends ILocale {
      */
     "letsLookAtTimeline": string;
     /**
-     * 連合なしにしますか？
+     * 連合を拒否しますか？
      */
     "disableFederationConfirm": string;
     /**
-     * 連合なしにしても投稿は非公開になりません。ほとんどの場合、連合なしにする必要はありません。
+     * 連合を拒否しても投稿は非公開になりません。ほとんどの場合、連合を拒否する必要はありません。
      */
     "disableFederationConfirmWarn": string;
     /**
-     * 連合なしにする
+     * 連合を拒否する
      */
     "disableFederationOk": string;
     /**
@@ -4359,7 +4359,7 @@ export interface Locale extends ILocale {
      */
     "sensitiveWords": string;
     /**
-     * 設定したワードが含まれるノートの公開範囲をホームにします。改行で区切って複数設定できます。
+     * 設定したワードが含まれるノートを耳打ち公開にします。改行で区切って複数設定できます。
      */
     "sensitiveWordsDescription": string;
     /**
@@ -5498,7 +5498,7 @@ export interface Locale extends ILocale {
      */
     "defaultImageCompressionLevel": string;
     /**
-     * 低くすると画質を保てますが、ファイルサイズは増加します。<br>高くするとファイル・サイズを減らせますが、画質は低下します。
+     * 低くすると画質を保てますが、ファイル・サイズは増加します。<br>高くするとファイル・サイズを減らせますが、画質は低下します。
      */
     "defaultImageCompressionLevel_description": string;
     /**
@@ -5510,19 +5510,19 @@ export interface Locale extends ILocale {
      */
     "inDays": string;
     /**
-     * セーフモードが有効です
+     * セーフ・モードが有効です
      */
     "safeModeEnabled": string;
     /**
-     * セーフモードが有効なため、プラグインはすべて無効化されています。
+     * セーフ・モードが有効なため、プラグインはすべて無効化されています。
      */
     "pluginsAreDisabledBecauseSafeMode": string;
     /**
-     * セーフモードが有効なため、カスタムCSSは適用されていません。
+     * セーフ・モードが有効なため、カスタムCSSは適用されていません。
      */
     "customCssIsDisabledBecauseSafeMode": string;
     /**
-     * セーフモードが有効な間はデフォルトのテーマが使用されます。セーフモードをオフにすると元に戻ります。
+     * セーフ・モードが有効な間はデフォルトのテーマが使用されます。セーフ・モードをオフにすると元に戻ります。
      */
     "themeIsDefaultBecauseSafeMode": string;
     /**
@@ -6326,7 +6326,7 @@ export interface Locale extends ILocale {
              */
             "local": string;
             /**
-             * ホーム・タイムラインとローカル・タイムラインの投稿が両方表示されます。
+             * 身内タイムラインと全体タイムラインのどちらの投稿も合わせて表示されます。
              */
             "social": string;
             /**
@@ -6357,11 +6357,11 @@ export interface Locale extends ILocale {
                  */
                 "description": string;
                 /**
-                 * すべてのユーザーに公開。
+                 * すべてのユーザーに公開。全体タイムラインに表示されます。
                  */
                 "public": string;
                 /**
-                 * ホーム・タイムラインのみに公開。フォロワー／プロフィールを見に来た人／リノートから、他のユーザーも見ることができます。
+                 * 身内タイムラインのみに表示し、全体タイムラインには非表示。ただし、フォロワー以外でも、リノートやプロフィール経由で閲覧できます。
                  */
                 "home": string;
                 /**
@@ -6455,19 +6455,19 @@ export interface Locale extends ILocale {
     };
     "_timelineDescription": {
         /**
-         * ホーム・タイムラインでは、あなたがフォローしているアカウントの投稿を見られます。
+         * 身内タイムラインでは、あなたがフォローしているアカウントの投稿を見られます。
          */
         "home": string;
         /**
-         * ローカル・タイムラインでは、このサーバーにいるユーザー全員の投稿を見られます。
+         * 全体タイムラインでは、このサーバーにいるユーザー全員の全体公開の投稿を見られます。
          */
         "local": string;
         /**
-         * ソーシャル・タイムラインには、ホーム・タイムラインとローカル・タイムラインの投稿が両方表示されます。
+         * 社交タイムラインには、身内タイムラインと全体タイムラインの投稿が合わせて表示されます。
          */
         "social": string;
         /**
-         * グローバル・タイムラインでは、接続している他のすべてのサーバーからの投稿を見られます。
+         * 連合タイムラインでは、接続している他のすべてのサーバーからの全体公開の投稿を見られます。
          */
         "global": string;
     };
@@ -6531,7 +6531,7 @@ export interface Locale extends ILocale {
          */
         "remoteNotesCleaning": string;
         /**
-         * 有効にすると、一定期間経過したリモートの投稿を定期的にクリーンアップしてデータベースの肥大化を抑制します。
+         * 有効にすると、一定期間経過したリモートの投稿を定期的にクリーン・アップしてデータベースの肥大化を抑制します。
          */
         "remoteNotesCleaning_description": string;
         /**
@@ -6623,7 +6623,7 @@ export interface Locale extends ILocale {
          */
         "restartServerSetupWizardConfirm_text": string;
         /**
-         * エントランスページのスタイル
+         * エントランス・ページのスタイル
          */
         "entrancePageStyle": string;
         /**
@@ -6631,7 +6631,7 @@ export interface Locale extends ILocale {
          */
         "showTimelineForVisitor": string;
         /**
-         * アクティビティを表示する
+         * アクティビティーを表示する
          */
         "showActivitiesForVisitor": string;
         "_userGeneratedContentsVisibilityForVisitor": {
@@ -7357,7 +7357,7 @@ export interface Locale extends ILocale {
                  */
                 "title": string;
                 /**
-                 * ホーム・タイムラインの流速が20npmを越す
+                 * 身内タイムラインの流速が20npmを越す
                  */
                 "description": string;
             };
@@ -7720,15 +7720,15 @@ export interface Locale extends ILocale {
         };
         "_options": {
             /**
-             * グローバル・タイムラインの閲覧
+             * 連合タイムラインの閲覧
              */
             "gtlAvailable": string;
             /**
-             * ローカル・タイムラインの閲覧
+             * 全体タイムラインの閲覧
              */
             "ltlAvailable": string;
             /**
-             * パブリック投稿の許可
+             * 全体投稿の許可
              */
             "canPublicNote": string;
             /**
@@ -8021,7 +8021,7 @@ export interface Locale extends ILocale {
          */
         "public": string;
         /**
-         * フォロワーだけに公開
+         * フォロワー限定公開
          */
         "followers": string;
         /**
@@ -9653,23 +9653,23 @@ export interface Locale extends ILocale {
     };
     "_visibility": {
         /**
-         * パブリック
+         * 全体公開
          */
         "public": string;
         /**
-         * 全てのユーザーに公開
+         * 全てのユーザーに公開し、全体タイムラインにも表示
          */
         "publicDescription": string;
         /**
-         * ホーム
+         * 耳打ち公開
          */
         "home": string;
         /**
-         * ホーム・タイムラインのみに公開
+         * 身内タイムラインのみに表示するが、全てのユーザーに公開
          */
         "homeDescription": string;
         /**
-         * フォロワー
+         * フォロワー限定公開
          */
         "followers": string;
         /**
@@ -9677,7 +9677,7 @@ export interface Locale extends ILocale {
          */
         "followersDescription": string;
         /**
-         * 指名
+         * 指名公開
          */
         "specified": string;
         /**
@@ -9685,7 +9685,7 @@ export interface Locale extends ILocale {
          */
         "specifiedDescription": string;
         /**
-         * 連合なし
+         * 連合拒否
          */
         "disableFederation": string;
         /**
@@ -9875,7 +9875,7 @@ export interface Locale extends ILocale {
          */
         "notesIncDec": string;
         /**
-         * ローカルのノートの増減
+         * ローカル・ノートの増減
          */
         "localNotesIncDec": string;
         /**
@@ -9951,19 +9951,19 @@ export interface Locale extends ILocale {
     };
     "_timelines": {
         /**
-         * ホーム
+         * 身内
          */
         "home": string;
         /**
-         * ローカル
+         * 全体
          */
         "local": string;
         /**
-         * ソーシャル
+         * 社交
          */
         "social": string;
         /**
-         * グローバル
+         * 連合
          */
         "global": string;
     };
@@ -10550,27 +10550,27 @@ export interface Locale extends ILocale {
              */
             "notifications": string;
             /**
-             * タイムライン
+             * 基本タイムライン
              */
             "tl": string;
             /**
-             * アンテナ
+             * アンテナ・タイムライン
              */
             "antenna": string;
             /**
-             * リスト
+             * リスト・タイムライン
              */
             "list": string;
             /**
-             * チャンネル
+             * チャンネル・タイムライン
              */
             "channel": string;
             /**
-             * メンション
+             * メンション・タイムライン
              */
             "mentions": string;
             /**
-             * 指名
+             * 指名タイムライン
              */
             "direct": string;
             /**
@@ -11892,7 +11892,7 @@ export interface Locale extends ILocale {
          */
         "otherOption3": string;
         /**
-         * Misskeyをセーフモードで起動
+         * Misskeyをセーフ・モードで起動
          */
         "otherOption4": string;
     };
@@ -12032,11 +12032,11 @@ export interface Locale extends ILocale {
          */
         "youCanConfigureMoreFederationSettingsLater": string;
         /**
-         * リモートコンテンツの自動クリーニング
+         * リモート・コンテンツの自動クリーニング
          */
         "remoteContentsCleaning": string;
         /**
-         * 連合を行うと、継続して多くのコンテンツを受信します。自動クリーニングを有効にすると、一定期間経過したリモートコンテンツを自動でサーバーから削除し、ストレージを節約できます。
+         * 連合を行うと、継続して多くのコンテンツを受信します。自動クリーニングを有効にすると、一定期間経過したリモート・コンテンツを自動でサーバーから削除し、ストレージを節約できます。
          */
         "remoteContentsCleaning_description": string;
         /**
@@ -12369,7 +12369,7 @@ export interface Locale extends ILocale {
              */
             "angle": string;
             /**
-             * サイズ
+             * 程度
              */
             "scale": string;
             /**
