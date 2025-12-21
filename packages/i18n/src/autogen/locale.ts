@@ -353,7 +353,7 @@ export interface Locale extends ILocale {
      */
     "rejectFollowRequestConfirm": ParameterizedString<"name">;
     /**
-     * エクスポートをリクエストしました。これには時間がかかる場合があります。エクスポートが終わると、「ドライブ」に追加されます。
+     * エクスポートを申請しました。これには時間がかかる場合があります。エクスポートが終わると、「ドライブ」に追加されます。
      */
     "exportRequested": string;
     /**
@@ -2173,7 +2173,7 @@ export interface Locale extends ILocale {
      */
     "regenerate": string;
     /**
-     * フォント・サイズ
+     * 文字サイズ
      */
     "fontSize": string;
     /**
@@ -2477,7 +2477,7 @@ export interface Locale extends ILocale {
      */
     "script": string;
     /**
-     * Pagesのスクリプトを無効にする
+     * ダイアリーのスクリプトを無効にする
      */
     "disablePagesScript": string;
     /**
@@ -3105,7 +3105,7 @@ export interface Locale extends ILocale {
      */
     "noCrawle": string;
     /**
-     * 外部の検索エンジンにあなたのユーザー・ページ、ノート、Pagesなどのコンテンツを登録（インデックス）しないよう要求します。
+     * 外部の検索エンジンにあなたのユーザー・ページ、ノート、ダイアリーなどのコンテンツを登録（インデックス）しないよう要求します。
      */
     "noCrawleDescription": string;
     /**
@@ -3149,11 +3149,11 @@ export interface Locale extends ILocale {
      */
     "noteFavoritesCount": string;
     /**
-     * Pageにいいねした数
+     * ダイアリーにいいねした数
      */
     "pageLikesCount": string;
     /**
-     * Pageにいいねされた数
+     * ダイアリーにいいねされた数
      */
     "pageLikedCount": string;
     /**
@@ -3161,7 +3161,7 @@ export interface Locale extends ILocale {
      */
     "contact": string;
     /**
-     * システムのデフォルトのフォントを使う
+     * システムのデフォルトの書体を使う
      */
     "useSystemFont": string;
     /**
@@ -5487,7 +5487,7 @@ export interface Locale extends ILocale {
     /**
      * ドライブでは、過去にアップロードしたファイルの一覧が表示されます。<br>
      * ノートに添付する際に再利用したり、あとで投稿するファイルを予めアップロードしておくこともできます。<br>
-     * <b>ファイルを削除すると、今までそのファイルを使用した全ての場所（ノート、ページ、アイコン、バナー等）からも見えなくなるので注意してください。</b><br>
+     * <b>ファイルを削除すると、今までそのファイルを使用した全ての場所（ノート、ダイアリー、アイコン、バナー等）からも見えなくなるので注意してください。</b><br>
      * フォルダーを作って整理することもできます。
      */
     "driveAboutTip": string;
@@ -5556,7 +5556,7 @@ export interface Locale extends ILocale {
      */
     "defaultCompressionLevel": string;
     /**
-     * 低くすると品質を保てますが、ファイルサイズは増加します。<br>高くするとファイルサイズを減らせますが、品質は低下します。
+     * 低くすると品質を保てますが、ファイル・サイズは増加します。<br>高くするとファイル・サイズを減らせますが、品質は低下します。
      */
     "defaultCompressionLevel_description": string;
     /**
@@ -6644,7 +6644,7 @@ export interface Locale extends ILocale {
              */
             "local": string;
             /**
-             * 身内タイムラインと全体タイムラインのどちらの投稿も合わせて表示されます。
+             * 身内タイムラインと公衆タイムラインのどちらの投稿も合わせて表示されます。
              */
             "social": string;
             /**
@@ -6675,11 +6675,11 @@ export interface Locale extends ILocale {
                  */
                 "description": string;
                 /**
-                 * すべてのユーザーに公開。全体タイムラインに表示されます。
+                 * すべてのユーザーに公開。全体タイムラインにも掲載されます。
                  */
                 "public": string;
                 /**
-                 * 身内タイムラインのみに表示し、全体タイムラインには非表示。ただし、フォロワー以外でも、リノートやプロフィール経由で閲覧できます。
+                 * 身内タイムラインのみに掲載し、全体タイムラインには非掲載。ただし、フォロワー以外でも、リノートやプロフィール経由で閲覧はできます。
                  */
                 "home": string;
                 /**
@@ -8090,7 +8090,7 @@ export interface Locale extends ILocale {
              */
             "maxFileSize_caption": string;
             /**
-             * ファイルにNSFWを常に付与
+             * ファイルにセンシティブを常に付与
              */
             "alwaysMarkNsfw": string;
             /**
@@ -9383,19 +9383,19 @@ export interface Locale extends ILocale {
          */
         "write:votes": string;
         /**
-         * ページを見る
+         * ダイアリーを見る
          */
         "read:pages": string;
         /**
-         * ページを操作する
+         * ダイアリーを操作する
          */
         "write:pages": string;
         /**
-         * ページのいいねを見る
+         * ダイアリーのいいねを見る
          */
         "read:page-likes": string;
         /**
-         * ページのいいねを操作する
+         * ダイアリーのいいねを操作する
          */
         "write:page-likes": string;
         /**
@@ -9987,7 +9987,7 @@ export interface Locale extends ILocale {
          */
         "public": string;
         /**
-         * 全てのユーザーに公開し、全体タイムラインにも表示
+         * 全ユーザーに公開し、全体タイムラインにも掲載
          */
         "publicDescription": string;
         /**
@@ -9995,7 +9995,7 @@ export interface Locale extends ILocale {
          */
         "home": string;
         /**
-         * 身内タイムラインのみに表示するが、全てのユーザーに公開
+         * 身内タイムラインのみに掲載し、全ユーザーにも公開
          */
         "homeDescription": string;
         /**
@@ -10019,7 +10019,7 @@ export interface Locale extends ILocale {
          */
         "disableFederation": string;
         /**
-         * リモート・サーバーへの配信を行いません
+         * リモート・サーバーへ配信せず
          */
         "disableFederationDescription": string;
     };
@@ -10415,11 +10415,11 @@ export interface Locale extends ILocale {
     };
     "_pages": {
         /**
-         * ページの作成
+         * ダイアリーの作成
          */
         "newPage": string;
         /**
-         * ページの編集
+         * ダイアリーの編集
          */
         "editPage": string;
         /**
@@ -10427,15 +10427,15 @@ export interface Locale extends ILocale {
          */
         "readPage": string;
         /**
-         * ページ設定
+         * ダイアリー設定
          */
         "pageSetting": string;
         /**
-         * 指定されたページURLは既に存在しています
+         * 指定されたダイアリーURLは既に存在しています
          */
         "nameAlreadyExists": string;
         /**
-         * 不正なページURLです
+         * 不正なダイアリーURLです
          */
         "invalidNameTitle": string;
         /**
@@ -10443,7 +10443,7 @@ export interface Locale extends ILocale {
          */
         "invalidNameText": string;
         /**
-         * このページを編集
+         * このダイアリーを編集
          */
         "editThisPage": string;
         /**
@@ -10451,7 +10451,7 @@ export interface Locale extends ILocale {
          */
         "viewSource": string;
         /**
-         * ページを見る
+         * ダイアリーを見る
          */
         "viewPage": string;
         /**
@@ -10463,11 +10463,11 @@ export interface Locale extends ILocale {
          */
         "unlike": string;
         /**
-         * 自分のページ
+         * 自分のダイアリー
          */
         "my": string;
         /**
-         * いいねしたページ
+         * いいねしたダイアリー
          */
         "liked": string;
         /**
@@ -10483,7 +10483,7 @@ export interface Locale extends ILocale {
          */
         "contents": string;
         /**
-         * ページ・ブロック
+         * ダイアリー・ブロック
          */
         "content": string;
         /**
@@ -10495,11 +10495,11 @@ export interface Locale extends ILocale {
          */
         "title": string;
         /**
-         * ページURL
+         * ダイアリーURL
          */
         "url": string;
         /**
-         * ページの要約
+         * ダイアリーの要約
          */
         "summary": string;
         /**
@@ -10511,7 +10511,7 @@ export interface Locale extends ILocale {
          */
         "hideTitleWhenPinned": string;
         /**
-         * フォント
+         * 書体
          */
         "font": string;
         /**
@@ -11341,7 +11341,7 @@ export interface Locale extends ILocale {
          */
         "deleteAccount": string;
         /**
-         * ページを削除
+         * ダイアリーを削除
          */
         "deletePage": string;
         /**
@@ -11357,7 +11357,7 @@ export interface Locale extends ILocale {
          */
         "deleteChatRoom": string;
         /**
-         * プロキシー・アカウントの説明を更新
+         * プロキシアカウントの説明を更新
          */
         "updateProxyAccountDescription": string;
     };

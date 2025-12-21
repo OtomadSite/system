@@ -76,7 +76,7 @@ function build(): Record<Language, Locale> {
 			case 'ja-JP':
 				a[key] = v as Locale;
 				break;
-			case 'ja-KS':
+			case 'ja-x-kansai':
 			case 'en-US':
 				a[key] = merge<Locale>(locales['ja-JP'] as Locale, v);
 				break;
