@@ -118,6 +118,7 @@ export class MetaEntityService {
 				imageUrl: ad.imageUrl,
 				memo: ad.memo,
 				dayOfWeek: ad.dayOfWeek,
+				isSensitive: ad.isSensitive ? true : undefined,
 			})),
 			notesPerOneAd: instance.notesPerOneAd,
 			enableEmail: instance.enableEmail,
