@@ -1945,7 +1945,7 @@ export interface Locale extends ILocale {
      */
     "markAsReadAllUnreadNotes": string;
     /**
-     * すべてのダイレクトメッセージを既読にする
+     * すべてのダイレクト・メッセージを既読にする
      */
     "markAsReadAllTalkMessages": string;
     /**
@@ -3125,7 +3125,7 @@ export interface Locale extends ILocale {
      */
     "disableShowingAnimatedImages": string;
     /**
-     * この設定に関わらずアニメーション画像が再生されないときは、ブラウザ・OSのアクセシビリティ設定や省電力設定等が干渉している場合があります。
+     * この設定に関わらずアニメーション画像が再生されないときは、ブラウザー／OSのアクセシビリティ設定や省電力設定等が干渉している場合があります。
      */
     "disableShowingAnimatedImages_caption": string;
     /**
@@ -4113,7 +4113,7 @@ export interface Locale extends ILocale {
      */
     "sendPushNotificationReadMessageCaption": string;
     /**
-     * ブラウザの通知設定を許可してください
+     * ブラウザーの通知設定を許可してください
      */
     "pleaseAllowPushNotification": string;
     /**
@@ -4121,7 +4121,7 @@ export interface Locale extends ILocale {
      */
     "browserPushNotificationDisabled": string;
     /**
-     * {serverName}から通知を送信する権限がありません。ブラウザの設定から通知を許可して再度お試しください。
+     * {serverName}から通知を送信する権限がありません。ブラウザーの設定から通知を許可して再度お試しください。
      */
     "browserPushNotificationDisabledDescription": ParameterizedString<"serverName">;
     /**
@@ -4725,7 +4725,7 @@ export interface Locale extends ILocale {
      */
     "enableIdenticonGeneration": string;
     /**
-     * リモートユーザーに付与したロールバッジを表示する
+     * リモート・ユーザーに付与したロール・バッジを表示する
      */
     "showRoleBadgesOfRemoteUsers": string;
     /**
@@ -5433,7 +5433,7 @@ export interface Locale extends ILocale {
      */
     "chat": string;
     /**
-     * ダイレクトメッセージ
+     * ダイレクト・メッセージ
      */
     "directMessage": string;
     /**
@@ -5666,15 +5666,15 @@ export interface Locale extends ILocale {
              */
             "day": string;
             /**
-             * 撮影した時刻(時)
+             * 撮影した時刻（時）
              */
             "hour": string;
             /**
-             * 撮影した時刻(分)
+             * 撮影した時刻（分）
              */
             "minute": string;
             /**
-             * 撮影した時刻(秒)
+             * 撮影した時刻（秒）
              */
             "second": string;
             /**
@@ -5690,7 +5690,7 @@ export interface Locale extends ILocale {
              */
             "camera_mm": string;
             /**
-             * 焦点距離(35mm判換算)
+             * 焦点距離（35 mm判換算）
              */
             "camera_mm_35": string;
             /**
@@ -5698,7 +5698,7 @@ export interface Locale extends ILocale {
              */
             "camera_f": string;
             /**
-             * シャッタースピード
+             * シャッター・スピード
              */
             "camera_s": string;
             /**
@@ -5721,7 +5721,7 @@ export interface Locale extends ILocale {
          */
         "title": string;
         /**
-         * 画像にフレームやメタデータを含んだラベルを追加して装飾できます。
+         * 画像にフレームやメタ・データを含んだラベルを追加して装飾できます。
          */
         "tip": string;
         /**
@@ -5749,11 +5749,11 @@ export interface Locale extends ILocale {
          */
         "centered": string;
         /**
-         * キャプション(大)
+         * キャプション（大）
          */
         "captionMain": string;
         /**
-         * キャプション(小)
+         * キャプション（小）
          */
         "captionSub": string;
         /**
@@ -5773,15 +5773,15 @@ export interface Locale extends ILocale {
          */
         "textColor": string;
         /**
-         * フォント
+         * 書体
          */
         "font": string;
         /**
-         * セリフ
+         * ゴシック体
          */
         "fontSerif": string;
         /**
-         * サンセリフ
+         * 明朝体
          */
         "fontSansSerif": string;
         /**
@@ -5948,23 +5948,23 @@ export interface Locale extends ILocale {
          */
         "deleteRoom": string;
         /**
-         * このサーバー、またはこのアカウントでダイレクトメッセージは有効化されていません。
+         * このサーバー、またはこのアカウントでダイレクト・メッセージは有効化されていません。
          */
         "chatNotAvailableForThisAccountOrServer": string;
         /**
-         * このサーバー、またはこのアカウントでダイレクトメッセージは読み取り専用となっています。新たに書き込んだり、グループを作成・参加したりすることはできません。
+         * このサーバー、またはこのアカウントでダイレクト・メッセージは読み取り専用となっています。新たに書き込んだり、グループを作成・参加したりすることはできません。
          */
         "chatIsReadOnlyForThisAccountOrServer": string;
         /**
-         * 相手のアカウントでダイレクトメッセージが使えない状態になっています。
+         * 相手のアカウントでダイレクト・メッセージが使えない状態になっています。
          */
         "chatNotAvailableInOtherAccount": string;
         /**
-         * このユーザーとのダイレクトメッセージを開始できません
+         * このユーザーとのダイレクト・メッセージを開始できません
          */
         "cannotChatWithTheUser": string;
         /**
-         * ダイレクトメッセージが使えない状態になっているか、相手がダイレクトメッセージを開放していません。
+         * ダイレクト・メッセージが使えない状態になっているか、相手がダイレクト・メッセージを開放していません。
          */
         "cannotChatWithTheUser_description": string;
         /**
@@ -5976,7 +5976,7 @@ export interface Locale extends ILocale {
          */
         "doYouAcceptInvitation": string;
         /**
-         * ダイレクトメッセージ
+         * ダイレクト・メッセージ
          */
         "chatWithThisUser": string;
         /**
@@ -8086,7 +8086,7 @@ export interface Locale extends ILocale {
              */
             "maxFileSize": string;
             /**
-             * リバースプロキシやCDNなど、前段で別の設定値が存在する場合があります。
+             * リバース・プロキシーやCDNなど、前段で別の設定値が存在する場合があります。
              */
             "maxFileSize_caption": string;
             /**
@@ -8178,7 +8178,7 @@ export interface Locale extends ILocale {
              */
             "canImportUserLists": string;
             /**
-             * ダイレクトメッセージを許可
+             * ダイレクト・メッセージを許可
              */
             "chatAvailability": string;
             /**
@@ -8202,7 +8202,7 @@ export interface Locale extends ILocale {
              */
             "scheduledNoteLimit": string;
             /**
-             * ウォーターマーク機能の使用可否
+             * ウォーター・マーク機能の使用可否
              */
             "watermarkAvailable": string;
         };
@@ -9059,7 +9059,7 @@ export interface Locale extends ILocale {
          */
         "reaction": string;
         /**
-         * ダイレクトメッセージ
+         * ダイレクト・メッセージ
          */
         "chatMessage": string;
     };
@@ -9343,11 +9343,11 @@ export interface Locale extends ILocale {
          */
         "write:following": string;
         /**
-         * ダイレクトメッセージを見る
+         * ダイレクト・メッセージを見る
          */
         "read:messaging": string;
         /**
-         * ダイレクトメッセージを操作する
+         * ダイレクト・メッセージを操作する
          */
         "write:messaging": string;
         /**
@@ -9639,11 +9639,11 @@ export interface Locale extends ILocale {
          */
         "write:report-abuse": string;
         /**
-         * ダイレクトメッセージを操作する
+         * ダイレクト・メッセージを操作する
          */
         "write:chat": string;
         /**
-         * ダイレクトメッセージを閲覧する
+         * ダイレクト・メッセージを閲覧する
          */
         "read:chat": string;
     };
@@ -9873,7 +9873,7 @@ export interface Locale extends ILocale {
          */
         "birthdayFollowings": string;
         /**
-         * ダイレクトメッセージ
+         * ダイレクト・メッセージ
          */
         "chat": string;
     };
@@ -10029,7 +10029,7 @@ export interface Locale extends ILocale {
          */
         "quitInspiteOfThereAreUnuploadedFilesConfirm": string;
         /**
-         * ファイルはまだアップロードされていません。ファイルのメニューから、リネームや画像のクロップ、ウォーターマークの付与、圧縮の有無などを設定できます。ファイルはノート投稿時に自動でアップロードされます。
+         * ファイルはまだアップロードされていません。ファイルのメニューから、リネームや画像のクロップ、ウォーター・マークの付与、圧縮の有無などを設定できます。ファイルはノート投稿時に自動でアップロードされます。
          */
         "uploaderTip": string;
         /**
@@ -10058,7 +10058,7 @@ export interface Locale extends ILocale {
              */
             "content_description": string;
             /**
-             * ツールバー
+             * ツール・バー
              */
             "toolbar_title": string;
             /**
@@ -10066,11 +10066,11 @@ export interface Locale extends ILocale {
              */
             "toolbar_description": string;
             /**
-             * アカウントメニュー
+             * アカウント・メニュー
              */
             "account_title": string;
             /**
-             * 投稿するアカウントを切り替えたり、アカウントに保存した下書き・予約投稿を一覧できます。
+             * 投稿するアカウントを切り替えたり、アカウントに保存した下書き／予約投稿を一覧できます。
              */
             "account_description": string;
             /**
@@ -10094,7 +10094,7 @@ export interface Locale extends ILocale {
              */
             "submit_title": string;
             /**
-             * ノートを投稿します。Ctrl + Enter / Cmd + Enter でも投稿できます。
+             * ノートを投稿します。Ctrl + Enter／Cmd + Enter でも投稿できます。
              */
             "submit_description": string;
         };
@@ -10675,7 +10675,7 @@ export interface Locale extends ILocale {
          */
         "roleAssigned": string;
         /**
-         * ダイレクトメッセージのグループへ招待されました
+         * ダイレクト・メッセージのグループへ招待されました
          */
         "chatRoomInvitationReceived": string;
         /**
@@ -10796,7 +10796,7 @@ export interface Locale extends ILocale {
              */
             "roleAssigned": string;
             /**
-             * ダイレクトメッセージのグループへ招待された
+             * ダイレクト・メッセージのグループへ招待された
              */
             "chatRoomInvitationReceived": string;
             /**
@@ -10978,7 +10978,7 @@ export interface Locale extends ILocale {
              */
             "roleTimeline": string;
             /**
-             * ダイレクトメッセージ
+             * ダイレクト・メッセージ
              */
             "chat": string;
         };
@@ -11153,7 +11153,7 @@ export interface Locale extends ILocale {
     };
     "_moderationLogTypes": {
         /**
-         * ジョブキューをクリア
+         * ジョブ・キューをクリア
          */
         "clearQueue": string;
         /**
@@ -11353,7 +11353,7 @@ export interface Locale extends ILocale {
          */
         "deleteGalleryPost": string;
         /**
-         * ダイレクトメッセージのグループを削除
+         * ダイレクト・メッセージのグループを削除
          */
         "deleteChatRoom": string;
         /**
@@ -12579,7 +12579,7 @@ export interface Locale extends ILocale {
         "tip": string;
     };
     /**
-     * ウォーターマーク
+     * ウォーター・マーク
      */
     "watermark": string;
     /**
@@ -12588,7 +12588,7 @@ export interface Locale extends ILocale {
     "defaultPreset": string;
     "_watermarkEditor": {
         /**
-         * 画像にクレジット情報などのウォーターマークを追加できます。
+         * 画像にクレジット情報などのウォーター・マークを追加できます。
          */
         "tip": string;
         /**
@@ -12604,7 +12604,7 @@ export interface Locale extends ILocale {
          */
         "driveFileTypeWarnDescription": string;
         /**
-         * ウォーターマークの編集
+         * ウォーター・マークの編集
          */
         "title": string;
         /**
@@ -13058,11 +13058,11 @@ export interface Locale extends ILocale {
          */
         "turnOffFlash": string;
         /**
-         * コードリーダーを再開
+         * コード・リーダーを再開
          */
         "startQr": string;
         /**
-         * コードリーダーを停止
+         * コード・リーダーを停止
          */
         "stopQr": string;
         /**
@@ -13078,7 +13078,7 @@ export interface Locale extends ILocale {
          */
         "raw": string;
         /**
-         * MFM
+         * マークアップ（MFM）
          */
         "mfm": string;
     };
