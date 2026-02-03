@@ -416,7 +416,7 @@ $cellHeight: 28px;
 	height: $cellHeight - 2;
 	outline: none;
 	border: none;
-	font-family: "Noto Sans", "Noto Sans JP", 'Hiragino Maru Gothic Pro', "BIZ UDGothic", Roboto, HelveticaNeue, Arial, sans-serif;
+	font-family: "あやねPゴシックJP", "Ayane P Gothic JP", "Noto Sans", sans-serif;
 }
 
 </style>
