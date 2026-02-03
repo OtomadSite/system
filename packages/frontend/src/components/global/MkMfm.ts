@@ -203,8 +203,8 @@ export default function (props: MfmProps, { emit }: { emit: SetupContext<MfmEven
 					}
 					case 'font': {
 						const family =
-							token.props.args.serif ? 'serif' :
-							token.props.args.monospace ? 'monospace' :
+							token.props.args.serif ? `"あやねP明朝JP", "Ayane P Mincho JP", "Noto Serif", serif` :
+							token.props.args.monospace ? `"みやこMゴシックJP", "Miyako M Gothic JP", monospace` :
 							token.props.args.cursive ? 'cursive' :
 							token.props.args.fantasy ? 'fantasy' :
 							token.props.args.emoji ? 'emoji' :

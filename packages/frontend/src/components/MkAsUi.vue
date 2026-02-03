@@ -179,11 +179,11 @@ function openPostForm() {
 }
 
 .fontSerif {
-	font-family: serif;
+	font-family: "あやねP明朝JP", "Ayane P Mincho JP", "Noto Serif", serif;
 }
 
 .fontMonospace {
-	font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+	font-family: "みやこMゴシックJP", "Miyako M Gothic JP", monospace;
 }
 
 .postForm {

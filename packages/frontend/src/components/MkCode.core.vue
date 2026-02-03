@@ -84,7 +84,7 @@ watch(() => props.lang, (to) => {
 <style module lang="scss">
 .codeBlockRoot :global(.shiki) {
 	overflow: auto;
-	font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+	font-family: "みやこMゴシックJP", "Miyako M Gothic JP", monospace;
 
 	color: var(--shiki-fallback);
 
@@ -94,7 +94,7 @@ watch(() => props.lang, (to) => {
 
 	& pre,
 	& code {
-		font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+		font-family: "みやこMゴシックJP", "Miyako M Gothic JP", monospace;
 	}
 }
 
