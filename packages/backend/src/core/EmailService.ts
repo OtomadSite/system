@@ -151,8 +151,7 @@ export class EmailService {
 				} : this.meta.email!,
 				to: to,
 				subject: subject,
-				text: text,
-				html: inlinedHtml,
+				text: `${text}\n\n\n${this.meta.name ? this.meta.name : this.config.host}\n${this.config.url}`,
 			});
 
 			this.logger.info(`Message sent: ${info.messageId}`);

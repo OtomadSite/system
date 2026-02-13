@@ -38,10 +38,10 @@ export type ModeratorInactivityRemainingTime = {
 };
 
 function generateModeratorInactivityMail(remainingTime: ModeratorInactivityRemainingTime) {
-	const subject = 'Moderator Inactivity Warning / モデレーター不在の通知';
+	const subject = '【重要】モデレーター・アカウントの操作の要求 / [Important] Moderator account activate request';
 
 	const timeVariant = remainingTime.asDays === 0 ? `${remainingTime.asHours} hours` : `${remainingTime.asDays} days`;
-	const timeVariantJa = remainingTime.asDays === 0 ? `${remainingTime.asHours} 時間` : `${remainingTime.asDays} 日間`;
+	const timeVariantJa = remainingTime.asDays === 0 ? `${remainingTime.asHours}時間` : `${remainingTime.asDays}日間`;
 	const message = [
 		'To Moderators,',
 		'',
@@ -58,7 +58,7 @@ function generateModeratorInactivityMail(remainingTime: ModeratorInactivityRemai
 	];
 
 	const html = message.join('<br>');
-	const text = message.join('\n');
+	const text = message.join(`一定期間、全てのモデレーター・アカウントで操作が確認されていません。\nこのまま${timeVariantJa}経過すると、このサーバーは招待制に切り替わってしまいます。\n招待制に切り替わる事を望まない場合は、モデレーターの誰かがログインして下さい。\n\nNo activity has been confirmed on all moderator accounts for a certain period of time.\nIf this continues, this server will switch to invitation-only mode in ${timeVariant}.\nIf you do not wish the server to switch to invitation-only mode, please have one of moderators log in.`);
 
 	return {
 		subject,
@@ -68,7 +68,7 @@ function generateModeratorInactivityMail(remainingTime: ModeratorInactivityRemai
 }
 
 function generateInvitationOnlyChangedMail() {
-	const subject = 'Change to Invitation-Only / 招待制に変更されました';
+	const subject = '【重要】招待制の開始 / [Important] Invitation-only mode launch';
 
 	const message = [
 		'To Moderators,',
@@ -86,7 +86,7 @@ function generateInvitationOnlyChangedMail() {
 	];
 
 	const html = message.join('<br>');
-	const text = message.join('\n');
+	const text = message.join(`全てのモデレーター・アカウントでの操作が確認されなくなってから、${MODERATOR_INACTIVITY_LIMIT_DAYS}日間経過した為、強制的に招待制へと切り替えました。\nこれを解除するには、モデレーターの誰かがログインして、コントロール・パネルで設定を変更する必要が有ります。\n\nIt has been ${MODERATOR_INACTIVITY_LIMIT_DAYS} days since we last detected no activity on all moderator accounts, so we have forced the server to switch to invitation-only mode.\nTo disable this, one of moderators will need to log in and change the settings in the control panel.`);
 
 	return {
 		subject,

@@ -91,9 +91,9 @@ export default class extends Endpoint<typeof meta, typeof paramDef> { // eslint-
 
 			const link = `${this.config.url}/reset-password/${token}`;
 
-			this.emailService.sendEmail(ps.email, 'Password reset requested',
+			this.emailService.sendEmail(ps.email, 'パスワードのリセット / Password reset',
 				`To reset password, please click this link:<br><a href="${link}">${link}</a>`,
-				`To reset password, please click this link: ${link}`);
+				`@${user.username}様\n（ID：${user.id}）\n\n\nパスワードをリセットするには、次のURLにアクセスして下さい。\nTo reset your password, please visit the following URL.\n\n${link}`);
 		});
 	}
 }

@@ -200,9 +200,9 @@ export class SignupApiService {
 
 			const link = `${this.config.url}/signup-complete/${code}`;
 
-			this.emailService.sendEmail(emailAddress!, 'Signup',
+			this.emailService.sendEmail(emailAddress!, 'アカウントの作成 / Account creation',
 				`To complete signup, please click this link:<br><a href="${link}">${link}</a>`,
-				`To complete signup, please click this link: ${link}`);
+				`@${pendingUser.username}様\n\n\nアカウントの作成を完了するには、次のURLにアクセスして下さい。\nTo complete your account creation, please visit the following URL.\n\n${link}`);
 
 			if (ticket) {
 				await this.registrationTicketsRepository.update(ticket.id, {
