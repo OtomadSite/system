@@ -116,12 +116,13 @@ function showMenu(ev: MouseEvent) {
 }
 
 .main {
-	text-align: center;
+	// text-align: center;
 }
 
 .mainIcon {
 	width: 85px;
-	margin-top: -47px;
+	margin: -47px auto 0;
+	display: table;
 	vertical-align: bottom;
 	filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
