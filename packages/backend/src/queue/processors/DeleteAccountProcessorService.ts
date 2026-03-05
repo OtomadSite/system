@@ -142,9 +142,9 @@ export class DeleteAccountProcessorService {
 		{ // Send email notification
 			const profile = await this.userProfilesRepository.findOneByOrFail({ userId: user.id });
 			if (profile.email && profile.emailVerified) {
-				this.emailService.sendEmail(profile.email, 'Account deleted',
+				this.emailService.sendEmail(profile.email, 'アカウントの削除 / Account deletion',
 					'Your account has been deleted.',
-					'Your account has been deleted.');
+					`@${user.username}様\n（ID：${user.id}）\n\n\nアカウントの削除が完了しました。\n尚、新しくアカウントを作成する場合、削除されたアカウントで使用していたユーザー名（${user.username}）を再び使用する事は出来ませんので、御注意下さい。\n\nYour account has been deleted.\nPlease note that if you create a new account, you will not be able to reuse the user name (${user.username}) used for the deleted account.`);
 			}
 		}
 
