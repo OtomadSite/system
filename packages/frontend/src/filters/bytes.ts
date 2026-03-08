@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: AGPL-3.0-only
  */
 
-export default (v, digits = 0) => {
+export default (v: number | null, digits = 0) => {
 	if (v == null) return '?';
 	const sizes = [' B', ' KiB', ' MiB', ' GiB', ' TiB', ' PiB', ' EiB', ' ZiB', ' YiB', ' RiB', ' QiB'];
 	if (v === 0) return '0';
