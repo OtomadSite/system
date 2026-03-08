@@ -5,10 +5,10 @@
 
 export default (v, digits = 0) => {
 	if (v == null) return '?';
-	const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB', 'RB', 'QB'];
+	const sizes = [' B', ' KiB', ' MiB', ' GiB', ' TiB', ' PiB', ' EiB', ' ZiB', ' YiB', ' RiB', ' QiB'];
 	if (v === 0) return '0';
 	const isMinus = v < 0;
 	if (isMinus) v = -v;
 	const i = Math.floor(Math.log(v) / Math.log(1024));
-	return (isMinus ? '-' : '') + (v / Math.pow(1024, i)).toFixed(digits).replace(/(\.[1-9]*)0+$/, '$1').replace(/\.$/, '') + (sizes[i] ?? `e+${ i * 3 }B`);
+	return (isMinus ? '-' : '') + (v / Math.pow(1024, i)).toFixed(digits).replace(/(\.[1-9]*)0+$/, '$1').replace(/\.$/, '') + (sizes[i] ?? `e+${ i * 3 } B`);
 };
