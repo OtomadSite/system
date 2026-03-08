@@ -36,7 +36,7 @@ const widgetPropsDef = {
 	url: {
 		type: 'string',
 		label: i18n.ts._widgetOptions._rss.url,
-		default: 'http://feeds.afpbb.com/rss/afpbb/afpbbnews',
+		default: 'https://news.web.nhk/n-data/conf/na/rss/cat0.xml',
 		manualSave: true,
 	},
 	refreshIntervalSec: {
