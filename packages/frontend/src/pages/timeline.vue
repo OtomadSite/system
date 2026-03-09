@@ -9,6 +9,9 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<MkTip v-if="isBasicTimeline(src)" :k="`tl.${src}`" style="margin-bottom: var(--MI-margin);">
 			{{ i18n.ts._timelineDescription[src] }}
 		</MkTip>
+		<MkInfo v-if="isBasicTimeline(src) && src !== 'home'" style="margin-bottom: var(--MI-margin);">
+			<div :class="$style.publicTimelineRules" v-html="i18n.ts._otomadSite.publicTimelineRules"></div>
+		</MkInfo>
 		<MkPostForm v-if="prefer.r.showFixedPostForm.value" :class="$style.postForm" class="_panel" fixed style="margin-bottom: var(--MI-margin);"/>
 		<MkStreamingNotesTimeline
 			ref="tlComponent"
@@ -34,6 +37,7 @@ import type { BasicTimelineType } from '@/timelines.js';
 import type { PageHeaderItem } from '@/types/page-header.js';
 import MkStreamingNotesTimeline from '@/components/MkStreamingNotesTimeline.vue';
 import MkPostForm from '@/components/MkPostForm.vue';
+import MkInfo from '@/components/MkInfo.vue';
 import * as os from '@/os.js';
 import { store } from '@/store.js';
 import { i18n } from '@/i18n.js';
@@ -332,5 +336,12 @@ definePage(() => ({
 	background: var(--MI_THEME-bg);
 	border-radius: var(--MI-radius);
 	overflow: clip;
+}
+
+.publicTimelineRules {
+	display: flex; flex-direction: column; gap: 8px;
+	h2 { margin: 0; font-size: 150%; text-align: center; }
+	ol { margin: 0; padding-left: 2em; list-style: decimal; }
+	p { margin: 0; }
 }
 </style>

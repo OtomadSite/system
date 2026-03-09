@@ -2185,7 +2185,7 @@ export interface Locale extends ILocale {
      */
     "limitTo": ParameterizedString<"x">;
     /**
-     * 画面幅が広いときはメディアリストを横並びで表示する
+     * 画面幅が広いときはメディア・リストを横並びで表示する
      */
     "showMediaListByGridInWideArea": string;
     /**
@@ -9974,15 +9974,15 @@ export interface Locale extends ILocale {
              */
             "labelTime": string;
             /**
-             * タイムゾーン
+             * タイム・ゾーン
              */
             "labelTz": string;
             /**
-             * 時刻とタイムゾーン
+             * 時刻とタイム・ゾーン
              */
             "labelTimeAndTz": string;
             /**
-             * タイムゾーン
+             * タイム・ゾーン
              */
             "timezone": string;
             /**
@@ -10006,7 +10006,7 @@ export interface Locale extends ILocale {
              */
             "url": string;
             /**
-             * 更新間隔(秒)
+             * 更新間隔（秒）
              */
             "refreshIntervalSec": string;
             /**
@@ -10020,7 +10020,7 @@ export interface Locale extends ILocale {
              */
             "shuffle": string;
             /**
-             * ティッカーのスクロール速度(秒)
+             * ティッカーのスクロール速度（秒）
              */
             "duration": string;
             /**
@@ -13265,5 +13265,11 @@ export interface Locale extends ILocale {
          * マークアップ（MFM）
          */
         "mfm": string;
+    };
+    "_otomadSite": {
+        /**
+         * <h2>全体タイムライン 鉄の掟</h2><ol><li>全体タイムラインは、誰もが自由に発言できる場です！</li><li><b>話題フリー</b>：みんなが特定の話題で盛り上がっていても、それとは無関係なノートをしてOK！</li><li><b>身分フリー</b>：無名や無産、見る専、作者といった身分に関わらず、誰でも参加してOK！</li></ol><p>「みんなが盛り上がっているのに別の話題をするな」といった排外行為や、「お前みたいな奴が出しゃばるな」といった上級化行為は、過度な自治としてペナルティーの対象となる場合があります！！</p>
+         */
+        "publicTimelineRules": string;
     };
 }
