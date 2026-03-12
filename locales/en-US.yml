@@ -75,7 +75,7 @@ receiveFollowRequest: "Follow request received"
 followRequestAccepted: "Follow request accepted"
 mention: "Mention"
 mentions: "Mentions"
-directNotes: "Direct notes"
+directNotes: "Circle-only notes"
 importAndExport: "Import / Export"
 import: "Import"
 export: "Export"
@@ -1688,9 +1688,9 @@ _initialTutorial:
       public: "Your note will be visible for all users."
       home: "Public only on the Home timeline. People visiting your profile, via followers, and through renotes can see it."
       followers: "Visible to followers only. Only followers can see it and no one else, and it cannot be renoted by others."
-      direct: "Visible only to specified users, and the recipient will be notified. It can be used as an alternative to direct messaging."
+      direct: "Visible only to specified users. It can be used as an alternative to direct messaging."
       doNotSendConfidencialOnDirect1: "Be careful when sending sensitive information!"
-      doNotSendConfidencialOnDirect2: "Administrators of the server can see what you write. Be careful with sensitive information when sending direct notes to users on untrusted servers."
+      doNotSendConfidencialOnDirect2: "Administrators of the server can see what you write. Be careful with sensitive information when sending circle-only notes to users on untrusted servers."
       localOnly: "Posting with this flag will not federate the note to other servers. Users on other servers will not be able to view these notes directly, regardless of the display settings above."
     _cw:
       title: "Content Warning"
@@ -2618,7 +2618,7 @@ _visibility:
   homeDescription: "Post to home timeline only"
   followers: "Followers"
   followersDescription: "Make visible to your followers only"
-  specified: "Direct"
+  specified: "Circle"
   specifiedDescription: "Make visible for specified users only"
   disableFederation: "Defederate"
   disableFederationDescription: "Don't transmit to other instances"
@@ -2876,7 +2876,7 @@ _deck:
     list: "List"
     channel: "Channel"
     mentions: "Mentions"
-    direct: "Direct notes"
+    direct: "Circle-only notes"
     roleTimeline: "Role Timeline"
     chat: "Chat with user"
 _dialog:
@@ -3441,3 +3441,8 @@ _qr:
   scanFile: "Scan image from device"
   raw: "Text"
   mfm: "MFM"
+
+_otomadSite:
+  _circle:
+    replyInformation: "When replying to a circle-only note, the visibility will be inherited from the note being replied to."
+    visibleTo: "Visible to"

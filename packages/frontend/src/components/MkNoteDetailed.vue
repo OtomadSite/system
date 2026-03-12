@@ -129,6 +129,12 @@ SPDX-License-Identifier: AGPL-3.0-only
 					<div v-if="appearNote.renote" :class="$style.quote"><MkNoteSimple :note="appearNote.renote" :class="$style.quoteNote"/></div>
 				</div>
 				<MkA v-if="appearNote.channel && !inChannel" :class="$style.channel" :to="`/channels/${appearNote.channel.id}`"><i class="ti ti-device-tv"></i> {{ appearNote.channel.name }}</MkA>
+				<!-- ↓サークル限定公開↓ -->
+				<div v-if="note.visibility === 'specified' && !appearNote.isHidden" :class="$style.circleUserList">
+					<span>{{ i18n.ts._otomadSite._circle.visibleTo }}</span>
+					<span v-for="user in circleUsers" :key="user.id" :class="$style.circleUser"><MkAcct :user="user" /></span>
+				</div>
+				<!-- ↑サークル限定公開↑ -->
 			</div>
 			<footer>
 				<div :class="$style.noteFooterInfo">
@@ -400,6 +406,11 @@ const reactionsPaginator = markRaw(new Paginator('notes/reactions', {
 		type: reactionTabType.value,
 	})),
 }));
+
+/* ↓サークル限定公開↓ */
+const circleUsers = ref<Misskey.entities.UserDetailed[]>([]);
+if (note.visibleUserIds) circleUsers.value = await misskeyApi("users/show", { userIds: note.visibleUserIds });
+/* ↑サークル限定公開↑ */
 
 useTooltip(renoteButton, async (showing) => {
 	const anchorElement = renoteButton.value;
@@ -835,6 +846,13 @@ function loadConversation() {
 	opacity: 0.7;
 	font-size: 80%;
 }
+
+/* ↓サークル限定公開↓ */
+.circleUserList {
+	margin-top: 16px; padding: 8px; background: var(--MI_THEME-accentedBg); display: flex; flex-wrap: wrap; gap: 8px 4px; font-size: 12px;
+	> span:first-child { font-weight: bold; color: var(--MI_THEME-accent); }
+}
+/* ↑サークル限定公開↑ */
 
 .noteFooterInfo {
 	margin: 16px 0;

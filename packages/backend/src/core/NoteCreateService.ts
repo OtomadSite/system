@@ -543,11 +543,12 @@ export class NoteCreateService implements OnApplicationShutdown {
 		if (data.visibility === 'specified') {
 			if (data.visibleUsers == null) throw new Error('invalid param');
 
-			for (const u of data.visibleUsers) {
+			/* ↓サークル限定公開をメンション扱いしない↓ */
+			/* for (const u of data.visibleUsers) {
 				if (!mentionedUsers.some(x => x.id === u.id)) {
 					mentionedUsers.push(u);
 				}
-			}
+			} */
 
 			if (data.reply && !data.visibleUsers.some(x => x.id === data.reply!.userId)) {
 				data.visibleUsers.push(await this.usersRepository.findOneByOrFail({ id: data.reply!.userId }));

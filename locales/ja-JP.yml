@@ -75,7 +75,7 @@ receiveFollowRequest: "フォロー申請が来ました"
 followRequestAccepted: "フォローが承認されました"
 mention: "メンション"
 mentions: "メンション"
-directNotes: "指名"
+directNotes: "サークル限定ノート"
 importAndExport: "インポートとエクスポート"
 import: "インポート"
 export: "エクスポート"
@@ -1705,7 +1705,7 @@ _initialTutorial:
       public: "すべてのユーザーに公開。全体タイムラインにも掲載されます。"
       home: "身内タイムラインのみに掲載し、全体タイムラインには非掲載。ただし、フォロワー以外でも、リノートやプロフィール経由で閲覧はできます。"
       followers: "フォロワーにのみ公開。本人以外がリノートすることはできず、またフォロワー以外は閲覧できません。"
-      direct: "指定したユーザーにのみ公開され、また相手に通知が入ります。"
+      direct: "指定したリストのその指定時点のメンバーにのみ公開されます。"
       doNotSendConfidencialOnDirect1: "機密情報は送信する際は注意してください。"
       doNotSendConfidencialOnDirect2: "送信先のサーバーの管理者は投稿内容を見ることが可能なので、信頼できないサーバーのユーザーが含まれる限定公開のノートを作成する際は、機密情報の扱いに注意が必要です。"
       localOnly: "他のサーバーに投稿を連合しません。前記の公開範囲に関わらず、他のサーバーのユーザーは、この設定がついたノートを直接閲覧することができなくなります。"
@@ -2679,8 +2679,8 @@ _visibility:
   homeDescription: "身内タイムラインのみに掲載し、全ユーザーにも公開"
   followers: "フォロワー限定公開"
   followersDescription: "自分のフォロワーのみに公開"
-  specified: "指名公開"
-  specifiedDescription: "指定したユーザーのみに公開"
+  specified: "サークル限定公開"
+  specifiedDescription: "指定したリストのメンバー（指定時点）のみに公開"
   disableFederation: "連合拒否"
   disableFederationDescription: "リモート・サーバーへ配信せず"
 
@@ -2953,7 +2953,7 @@ _deck:
     list: "リスト・タイムライン"
     channel: "チャンネル・タイムライン"
     mentions: "メンション・タイムライン"
-    direct: "指名タイムライン"
+    direct: "サークル・タイムライン"
     roleTimeline: "ロール・タイムライン"
     chat: "ダイレクト・メッセージ"
 
@@ -3557,3 +3557,6 @@ _qr:
 
 _otomadSite:
   publicTimelineRules: "<h2>全体タイムライン 鉄の掟</h2><ol><li>全体タイムラインは、誰もが自由に発言できる場です！</li><li><b>話題フリー</b>：みんなが特定の話題で盛り上がっていても、それとは無関係なノートをしてOK！</li><li><b>身分フリー</b>：無名や無産、見る専、作者といった身分に関わらず、誰でも参加してOK！</li></ol><p>「みんなが盛り上がっているのに別の話題をするな」といった排外行為や、「お前みたいな奴が出しゃばるな」といった上級化行為は、過度な自治としてペナルティーの対象となる場合があります！！</p>"
+  _circle:
+    replyInformation: "サークル限定ノートへの返信では、公開範囲が引き継がれます。"
+    visibleTo: "公開先"

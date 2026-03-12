@@ -50,7 +50,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 	<MkNoteSimple v-if="replyTargetNote" :class="$style.targetNote" :note="replyTargetNote"/>
 	<MkNoteSimple v-if="renoteTargetNote" :class="$style.targetNote" :note="renoteTargetNote"/>
 	<div v-if="quoteId" :class="$style.withQuote"><i class="ti ti-quote"></i> {{ i18n.ts.quoteAttached }}<button @click="quoteId = null; renoteTargetNote = null;"><i class="ti ti-x"></i></button></div>
-	<div v-if="visibility === 'specified'" :class="$style.toSpecified">
+	<!-- div v-if="visibility === 'specified'" :class="$style.toSpecified">
 		<span style="margin-right: 8px;">{{ i18n.ts.recipient }}</span>
 		<div :class="$style.visibleUsers">
 			<span v-for="u in visibleUsers" :key="u.id" :class="$style.visibleUser">
@@ -59,7 +59,20 @@ SPDX-License-Identifier: AGPL-3.0-only
 			</span>
 			<button class="_buttonPrimary" style="padding: 4px; border-radius: 8px;" @click="addVisibleUser"><i class="ti ti-plus ti-fw"></i></button>
 		</div>
+	</div -->
+	<!-- ↓サークル限定公開↓ -->
+	<div v-else-if="visibility === 'specified'" :class="$style.toCircleOnly">
+		<MkInfo v-if="replyTargetNote && replyTargetNote.visibility === 'specified'">{{ i18n.ts._otomadSite._circle.replyInformation }}</MkInfo>
+		<div v-else :class="$style.circleSelectForm">
+			<span>{{ circleList ? circleList.name : i18n.ts.selectList }}</span>
+			<button class="_buttonPrimary" @click="setVisibleUserList"><i class="ti ti-list ti-fw"></i></button>
+		</div>
+		<div :class="$style.circleUserList">
+			<span>{{ i18n.ts._otomadSite._circle.visibleTo }}</span>
+			<span v-for="user in visibleUsers" :key="user.id" :class="$style.circleUser"><MkAcct :user="user" /></span>
+		</div>
 	</div>
+	<!-- ↑サークル限定公開↑ -->
 	<MkInfo v-if="!store.r.tips.value.postForm" :class="$style.showHowToUse" closable @close="closeTip('postForm')">
 		<button class="_textButton" @click="showTour">{{ i18n.ts._postForm.showHowToUse }}</button>
 	</MkInfo>
@@ -207,9 +220,11 @@ const cw = ref<string | null>(props.initialCw ?? null);
 const localOnly = ref(props.initialLocalOnly ?? (prefer.s.rememberNoteVisibility ? store.s.localOnly : prefer.s.defaultNoteLocalOnly));
 const visibility = ref(props.initialVisibility ?? (prefer.s.rememberNoteVisibility ? store.s.visibility : prefer.s.defaultNoteVisibility));
 const visibleUsers = ref<Misskey.entities.UserDetailed[]>([]);
-if (props.initialVisibleUsers) {
+const circleList = ref<Misskey.entities.UserList | null>(null); // サークル限定公開
+/* サークル限定公開対応の為、プロフィール・ページから指名投稿が出来る機能を無効化。 */
+/* if (props.initialVisibleUsers) {
 	props.initialVisibleUsers.forEach(u => pushVisibleUser(u));
-}
+} */
 const reactionAcceptance = ref(store.s.reactionAcceptance);
 const scheduledAt = ref<number | null>(null);
 const draghover = ref(false);
@@ -711,6 +726,26 @@ function addVisibleUser() {
 function removeVisibleUser(id: string) {
 	visibleUsers.value = visibleUsers.value.filter(u => u.id !== id);
 }
+
+/* ↓サークル限定公開↓ */
+async function setVisibleUserList() {
+	const lists = await misskeyApi('users/lists/list');
+	const { canceled, result: listIdOrOperation } = await os.select({
+		title: i18n.ts.selectList,
+		items: lists.map(x => ({ value: x.id, label: x.name, })),
+	});
+
+	if (canceled || listIdOrOperation == null) return;
+	const list = lists.find(x => x.id === listIdOrOperation)!;
+	circleList.value = list;
+
+	if (list.userIds) {
+		const users = await misskeyApi("users/show", { userIds: list.userIds });
+		visibleUsers.value = users;
+		removeVisibleUser($i.id);
+	}
+}
+/* ↑サークル限定公開↑ */
 
 function clear() {
 	text.value = '';
@@ -1688,6 +1723,22 @@ html[data-color-scheme=light] .preview {
 	border-radius: 8px;
 	background: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
 }
+
+/* ↓サークル限定公開↓ */
+.toCircleOnly {
+	margin-bottom: 16px; padding-inline: 24px; display: flex; flex-direction: column; gap: 8px;
+	button { padding: 4px; border-radius: 8px; }
+}
+
+.circleSelectForm {
+	display: flex; align-items: center; gap: 8px;
+}
+
+.circleUserList {
+	padding: 8px; background: var(--MI_THEME-accentedBg); display: flex; flex-wrap: wrap; gap: 8px 4px; font-size: 12px;
+	> span:first-child { font-weight: bold; color: var(--MI_THEME-accent); }
+}
+/* ↑サークル限定公開↑ */
 
 .hasNotSpecifiedMentions {
 	margin: 0 20px 16px 20px;

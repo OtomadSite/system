@@ -313,7 +313,7 @@ export interface Locale extends ILocale {
      */
     "mentions": string;
     /**
-     * 指名
+     * サークル限定ノート
      */
     "directNotes": string;
     /**
@@ -6707,7 +6707,7 @@ export interface Locale extends ILocale {
                  */
                 "followers": string;
                 /**
-                 * 指定したユーザーにのみ公開され、また相手に通知が入ります。
+                 * 指定したリストのその指定時点のメンバーにのみ公開されます。
                  */
                 "direct": string;
                 /**
@@ -10165,11 +10165,11 @@ export interface Locale extends ILocale {
          */
         "followersDescription": string;
         /**
-         * 指名公開
+         * サークル限定公開
          */
         "specified": string;
         /**
-         * 指定したユーザーのみに公開
+         * 指定したリストのメンバー（指定時点）のみに公開
          */
         "specifiedDescription": string;
         /**
@@ -11158,7 +11158,7 @@ export interface Locale extends ILocale {
              */
             "mentions": string;
             /**
-             * 指名タイムライン
+             * サークル・タイムライン
              */
             "direct": string;
             /**
@@ -13271,5 +13271,15 @@ export interface Locale extends ILocale {
          * <h2>全体タイムライン 鉄の掟</h2><ol><li>全体タイムラインは、誰もが自由に発言できる場です！</li><li><b>話題フリー</b>：みんなが特定の話題で盛り上がっていても、それとは無関係なノートをしてOK！</li><li><b>身分フリー</b>：無名や無産、見る専、作者といった身分に関わらず、誰でも参加してOK！</li></ol><p>「みんなが盛り上がっているのに別の話題をするな」といった排外行為や、「お前みたいな奴が出しゃばるな」といった上級化行為は、過度な自治としてペナルティーの対象となる場合があります！！</p>
          */
         "publicTimelineRules": string;
+        "_circle": {
+            /**
+             * サークル限定ノートへの返信では、公開範囲が引き継がれます。
+             */
+            "replyInformation": string;
+            /**
+             * 公開先
+             */
+            "visibleTo": string;
+        };
     };
 }
