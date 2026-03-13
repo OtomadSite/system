@@ -1545,7 +1545,7 @@ export interface Locale extends ILocale {
      */
     "yearX": ParameterizedString<"year">;
     /**
-     * ページ
+     * ダイアリー
      */
     "pages": string;
     /**
@@ -2185,7 +2185,7 @@ export interface Locale extends ILocale {
      */
     "limitTo": ParameterizedString<"x">;
     /**
-     * 画面幅が広いときはメディアリストを横並びで表示する
+     * 画面幅が広いときはメディア・リストを横並びで表示する
      */
     "showMediaListByGridInWideArea": string;
     /**
@@ -4293,7 +4293,7 @@ export interface Locale extends ILocale {
      */
     "thisPostMayBeAnnoying": string;
     /**
-     * 耳打ち公開で投稿
+     * 囁き公開で投稿
      */
     "thisPostMayBeAnnoyingHome": string;
     /**
@@ -4397,7 +4397,7 @@ export interface Locale extends ILocale {
      */
     "sensitiveWords": string;
     /**
-     * 設定したワードが含まれるノートを耳打ち公開にします。改行で区切って複数設定できます。
+     * 設定したワードが含まれるノートを囁き公開にします。改行で区切って複数設定できます。
      */
     "sensitiveWordsDescription": string;
     /**
@@ -9974,15 +9974,15 @@ export interface Locale extends ILocale {
              */
             "labelTime": string;
             /**
-             * タイムゾーン
+             * タイム・ゾーン
              */
             "labelTz": string;
             /**
-             * 時刻とタイムゾーン
+             * 時刻とタイム・ゾーン
              */
             "labelTimeAndTz": string;
             /**
-             * タイムゾーン
+             * タイム・ゾーン
              */
             "timezone": string;
             /**
@@ -10006,7 +10006,7 @@ export interface Locale extends ILocale {
              */
             "url": string;
             /**
-             * 更新間隔(秒)
+             * 更新間隔（秒）
              */
             "refreshIntervalSec": string;
             /**
@@ -10020,7 +10020,7 @@ export interface Locale extends ILocale {
              */
             "shuffle": string;
             /**
-             * ティッカーのスクロール速度(秒)
+             * ティッカーのスクロール速度（秒）
              */
             "duration": string;
             /**
@@ -10149,7 +10149,7 @@ export interface Locale extends ILocale {
          */
         "publicDescription": string;
         /**
-         * 耳打ち公開
+         * 囁き公開
          */
         "home": string;
         /**
