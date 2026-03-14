@@ -1545,7 +1545,7 @@ export interface Locale extends ILocale {
      */
     "yearX": ParameterizedString<"year">;
     /**
-     * ページ
+     * ダイアリー
      */
     "pages": string;
     /**
@@ -4293,7 +4293,7 @@ export interface Locale extends ILocale {
      */
     "thisPostMayBeAnnoying": string;
     /**
-     * 耳打ち公開で投稿
+     * 囁き公開で投稿
      */
     "thisPostMayBeAnnoyingHome": string;
     /**
@@ -4397,7 +4397,7 @@ export interface Locale extends ILocale {
      */
     "sensitiveWords": string;
     /**
-     * 設定したワードが含まれるノートを耳打ち公開にします。改行で区切って複数設定できます。
+     * 設定したワードが含まれるノートを囁き公開にします。改行で区切って複数設定できます。
      */
     "sensitiveWordsDescription": string;
     /**
@@ -10149,7 +10149,7 @@ export interface Locale extends ILocale {
          */
         "publicDescription": string;
         /**
-         * 耳打ち公開
+         * 囁き公開
          */
         "home": string;
         /**
