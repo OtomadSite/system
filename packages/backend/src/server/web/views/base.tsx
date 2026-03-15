@@ -46,7 +46,7 @@ export function Layout(props: PropsWithChildren<CommonProps<{
 					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 					<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
 					<link rel="icon" href={props.icon || '/favicon.ico'} />
-					<link rel="apple-touch-icon" href={props.appleTouchIcon || '/apple-touch-icon.png'} />
+					<link rel="apple-touch-icon" href="https://res.otomad.site/meta/apple-touch-icon.png" />
 					<link rel="manifest" href="/manifest.json" />
 					<link rel="search" type="application/opensearchdescription+xml" title={props.title || 'Misskey'} href={`${props.config.url}/opensearch.xml`} />
 					{props.serverErrorImageUrl != null ? <link rel="prefetch" as="image" href={props.serverErrorImageUrl} /> : null}
@@ -71,7 +71,7 @@ export function Layout(props: PropsWithChildren<CommonProps<{
 						<>
 							<meta property="og:title" content={props.title || 'Misskey'} />
 							<meta property="og:description" content={props.desc || defaultDescription} />
-							{props.img != null ? <meta property="og:image" content={props.img} /> : null}
+							<meta property="og:image" content="https://res.otomad.site/meta/og.png" />
 							<meta property="twitter:card" content="summary" />
 						</>
 					)}

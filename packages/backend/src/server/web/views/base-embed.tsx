@@ -44,7 +44,7 @@ export function BaseEmbed(props: PropsWithChildren<CommonProps<{
 					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 					<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
 					<link rel="icon" href={props.icon ?? '/favicon.ico'} />
-					<link rel="apple-touch-icon" href={props.appleTouchIcon ?? '/apple-touch-icon.png'} />
+					<link rel="apple-touch-icon" href="https://res.otomad.site/meta/apple-touch-icon.png" />
 
 					{!props.config.frontendEmbedManifestExists ? <script type="module" src="/embed_vite/@vite/client"></script> : null}
 
