@@ -83,7 +83,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 			</template>
 		</I18n> - <button class="_textButton" @click="cancelSchedule()">{{ i18n.ts.cancel }}</button>
 	</MkInfo>
-	<MkInfo v-if="hasNotSpecifiedMentions" warn :class="$style.hasNotSpecifiedMentions">{{ i18n.ts.notSpecifiedMentionWarning }} - <button class="_textButton" @click="addMissingMention()">{{ i18n.ts.add }}</button></MkInfo>
+	<!-- MkInfo v-if="hasNotSpecifiedMentions" warn :class="$style.hasNotSpecifiedMentions">{{ i18n.ts.notSpecifiedMentionWarning }} - <button class="_textButton" @click="addMissingMention()">{{ i18n.ts.add }}</button></MkInfo -->
 	<div v-show="useCw" :class="$style.cwOuter">
 		<input ref="cwInputEl" v-model="cw" :class="$style.cw" :placeholder="i18n.ts.annotation" @keydown="onKeydown" @keyup="onKeyup" @compositionend="onCompositionEnd">
 		<div v-if="maxCwTextLength - cwTextLength < 20" :class="['_acrylic', $style.cwTextCount, { [$style.cwTextOver]: cwTextLength > maxCwTextLength }]">{{ maxCwTextLength - cwTextLength }}</div>
@@ -221,7 +221,7 @@ const localOnly = ref(props.initialLocalOnly ?? (prefer.s.rememberNoteVisibility
 const visibility = ref(props.initialVisibility ?? (prefer.s.rememberNoteVisibility ? store.s.visibility : prefer.s.defaultNoteVisibility));
 const visibleUsers = ref<Misskey.entities.UserDetailed[]>([]);
 const circleList = ref<Misskey.entities.UserList | null>(null); // サークル限定公開
-/* サークル限定公開対応の為、プロフィール・ページから指名投稿が出来る機能を無効化。 */
+/* サークル限定公開対応の為、共有リンクから指名投稿が出来る機能を無効化。 */
 /* if (props.initialVisibleUsers) {
 	props.initialVisibleUsers.forEach(u => pushVisibleUser(u));
 } */
@@ -431,10 +431,11 @@ if (replyTargetNote.value && ['home', 'followers', 'specified'].includes(replyTa
 	}
 }
 
-if (props.specified) {
+/* サークル限定公開対応の為、プロフィール・ページから指名投稿が出来る機能を無効化。 */
+/* if (props.specified) {
 	visibility.value = 'specified';
 	pushVisibleUser(props.specified);
-}
+} */
 
 // keep cw when reply
 if (prefer.s.keepCw && replyTargetNote.value && replyTargetNote.value.cw) {
