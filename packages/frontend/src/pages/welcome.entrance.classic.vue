@@ -9,9 +9,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 	<XTimeline :class="$style.tl"/>
 	<div :class="$style.shape1"></div>
 	<div :class="$style.shape2"></div>
-	<div :class="$style.logoWrapper">
-		<img :src="otomadSiteLogo" />
-	</div>
+	<img :src="otomadSiteLogo" :class="$style.logo" />
 	<div :class="$style.contents">
 		<MkVisitorDashboard/>
 	</div>
@@ -111,7 +109,7 @@ misskeyApiGet('federation/instances', {
 	opacity: 0.5;
 }
 
-.logoWrapper {
+.logo {
 	position: fixed;
 	top: 36px;
 	left: 36px;
@@ -121,10 +119,6 @@ misskeyApiGet('federation/instances', {
 	user-select: none;
 	pointer-events: none;
 	filter: drop-shadow(0 0 4px var(--MI_THEME-accent));
-
-	img {
-		height: 100%;
-	}
 
 	@media (max-width: 450px) {
 		left: 16px;

@@ -6,9 +6,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 <template>
 <div v-if="meta" :class="$style.root">
 	<MkFeaturedPhotos :class="$style.bg"/>
-	<div :class="$style.logoWrapper">
-		<img :src="otomadSiteLogo" />
-	</div>
+	<img :src="otomadSiteLogo" :class="$style.logo" />
 	<div :class="$style.contents">
 		<MkVisitorDashboard/>
 	</div>
@@ -37,7 +35,7 @@ import { instance as meta } from '@/instance.js';
 	height: 100vh;
 }
 
-.logoWrapper {
+.logo {
 	position: fixed;
 	top: 36px;
 	left: 36px;
@@ -47,10 +45,6 @@ import { instance as meta } from '@/instance.js';
 	user-select: none;
 	pointer-events: none;
 	filter: drop-shadow(0 0 4px var(--MI_THEME-accent));
-
-	img {
-		height: 100%;
-	}
 
 	@media (max-width: 450px) {
 		left: 16px;
