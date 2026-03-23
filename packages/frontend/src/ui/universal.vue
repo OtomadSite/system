@@ -12,6 +12,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 		<div :class="[$style.contents, !isMobile && prefer.r.showTitlebar.value ? $style.withSidebarAndTitlebar : null]" @contextmenu.stop="onContextmenu">
 			<div>
+				<OtMarquee />
 				<XReloadSuggestion v-if="shouldSuggestReload"/>
 				<XPreferenceRestore v-if="shouldSuggestRestoreBackup"/>
 				<XAnnouncements v-if="$i"/>
@@ -53,6 +54,7 @@ import { prefer } from '@/preferences.js';
 import { shouldSuggestRestoreBackup } from '@/preferences/utility.js';
 import { DI } from '@/di.js';
 import { shouldSuggestReload } from '@/utility/reload-suggest.js';
+import OtMarquee from '@/components/OtMarquee.vue';
 
 const XWidgets = defineAsyncComponent(() => import('./_common_/widgets.vue'));
 const XStatusBars = defineAsyncComponent(() => import('@/ui/_common_/statusbars.vue'));

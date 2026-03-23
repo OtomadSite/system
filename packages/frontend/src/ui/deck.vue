@@ -13,6 +13,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<div :class="[$style.main, { [$style.withWallpaper]: withWallpaper, [$style.withSidebarAndTitlebar]: !isMobile && prefer.r['deck.navbarPosition'].value === 'left' && prefer.r.showTitlebar.value }]" :style="{ backgroundImage: prefer.s['deck.wallpaper'] != null ? `url(${ prefer.s['deck.wallpaper'] })` : '' }">
 			<XNavbarH v-if="!isMobile && prefer.r['deck.navbarPosition'].value === 'top'" :acrylic="withWallpaper"/>
 
+			<OtMarquee v-if="isMobile || prefer.r['deck.navbarPosition'].value !== 'top'" />
 			<XReloadSuggestion v-if="shouldSuggestReload"/>
 			<XPreferenceRestore v-if="shouldSuggestRestoreBackup"/>
 			<XAnnouncements v-if="$i"/>
@@ -74,6 +75,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 				</div>
 			</div>
 
+			<OtMarquee v-if="!isMobile && prefer.r['deck.navbarPosition'].value === 'top'" />
 			<XNavbarH v-if="!isMobile && prefer.r['deck.navbarPosition'].value === 'bottom'" :acrylic="withWallpaper"/>
 
 			<XMobileFooterMenu v-if="isMobile" v-model:drawerMenuShowing="drawerMenuShowing" v-model:widgetsShowing="widgetsShowing"/>
@@ -118,6 +120,7 @@ import { shouldSuggestRestoreBackup } from '@/preferences/utility.js';
 import { shouldSuggestReload } from '@/utility/reload-suggest.js';
 import { startTour } from '@/utility/tour.js';
 import { closeTip } from '@/tips.js';
+import OtMarquee from '@/components/OtMarquee.vue';
 
 const XStatusBars = defineAsyncComponent(() => import('@/ui/_common_/statusbars.vue'));
 const XAnnouncements = defineAsyncComponent(() => import('@/ui/_common_/announcements.vue'));
