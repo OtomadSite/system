@@ -5,14 +5,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <template>
 <section>
-	<component
-		:is="'h' + h"
-		:class="{
-			'h2': h === 2,
-			'h3': h === 3,
-			'h4': h === 4,
-		}"
-	>
+	<component :is="'h' + h" :class="$style.heading">
 		{{ block.title }}
 	</component>
 
@@ -36,18 +29,10 @@ defineProps<{
 </script>
 
 <style lang="scss" module>
-.h2 {
-	font-size: 1.35em;
-	margin: 0 0 0.5em 0;
-}
-
-.h3 {
-	font-size: 1em;
-	margin: 0 0 0.5em 0;
-}
-
-.h4 {
-	font-size: 1em;
-	margin: 0 0 0.5em 0;
-}
+.heading { margin: 0 0 1rem; border-bottom: 1px solid var(--MI_THEME-fg); display: block; }
+h2.heading { border-bottom: 4px solid var(--MI_THEME-accent); font-size: 1.5rem; font-weight: bold; }
+h3.heading { border-bottom: 4px solid var(--MI_THEME-accent); font-size: 1.25rem; font-weight: bold; }
+h4.heading { border-bottom: 4px solid var(--MI_THEME-accent); font-size: 1rem; font-weight: bold; }
+h5.heading { border-bottom: 2px solid var(--MI_THEME-accent); font-size: 1rem; font-weight: normal; }
+h6.heading { border-bottom: 1px solid var(--MI_THEME-accent); font-size: 1rem; font-weight: normal; }
 </style>
