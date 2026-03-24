@@ -50,9 +50,9 @@ export class SigninService {
 
 			const profile = await this.userProfilesRepository.findOneByOrFail({ userId: user.id });
 			if (profile.email && profile.emailVerified) {
-				this.emailService.sendEmail(profile.email, '新しいログイン / New log-in',
+				this.emailService.sendEmail(profile.email, '新しいログイン / New login',
 					'There is a new login. If you do not recognize this login, update the security status of your account, including changing your password. / 新しいログインがありました。このログインに心当たりがない場合は、パスワードを変更するなど、アカウントのセキュリティ状態を更新してください。',
-					`@${user.username}様\n（ID：${user.id}）\n\n\n${request.ip}から新しいログインがありました。\nこのログインに心当たりがない場合、パスワードを変更する等、アカウントのセキュリティー状態を更新して下さい。\n\nThere has a new log-in from ${request.ip}.\nIf you don't recognize this log-in, please update your account security status, including changing your password.`);
+					`@${user.username}様\n（ID：${user.id}）\n\n\n${request.ip}から新しいログインがありました。\nこのログインに心当たりがない場合、パスワードを変更する等、アカウントのセキュリティー状態を更新して下さい。\n\nThere has a new login from ${request.ip}.\nIf you don't recognize this login, please update your account security status, including changing your password.`);
 			}
 		});
 

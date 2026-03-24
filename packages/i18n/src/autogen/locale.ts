@@ -149,7 +149,7 @@ export interface Locale extends ILocale {
      */
     "logout": string;
     /**
-     * 新規登録
+     * アカウント作成
      */
     "signup": string;
     /**
@@ -1261,7 +1261,7 @@ export interface Locale extends ILocale {
      */
     "basicNotesBeforeCreateAccount": string;
     /**
-     * 約款
+     * 利用約款
      */
     "termsOfService": string;
     /**
@@ -1517,7 +1517,7 @@ export interface Locale extends ILocale {
      */
     "maintainerEmail": string;
     /**
-     * 約款URL
+     * 利用約款URL
      */
     "tosUrl": string;
     /**
@@ -2533,7 +2533,7 @@ export interface Locale extends ILocale {
      */
     "yourAccountSuspendedTitle": string;
     /**
-     * このアカウントは、サーバーの約款に違反したなどの理由により、凍結されています。詳細についてはサーバーの管理者に問い合わせてください。新しいアカウントを作らないでください。
+     * このアカウントは、サーバーの利用約款に違反したなどの理由により、凍結されています。詳細についてはサーバーの管理者に問い合わせてください。新しいアカウントを作らないでください。
      */
     "yourAccountSuspendedDescription": string;
     /**
@@ -4985,15 +4985,15 @@ export interface Locale extends ILocale {
      */
     "impressumDescription": string;
     /**
-     * 個人情報保護方針
+     * プライバシー・ポリシー
      */
     "privacyPolicy": string;
     /**
-     * 個人情報保護方針URL
+     * プライバシー・ポリシーURL
      */
     "privacyPolicyUrl": string;
     /**
-     * 約款／個人情報保護方針
+     * 利用約款／プライバシー・ポリシー
      */
     "tosAndPrivacyPolicy": string;
     /**
@@ -6811,7 +6811,7 @@ export interface Locale extends ILocale {
     };
     "_serverRules": {
         /**
-         * 新規登録前に表示する、サーバーの簡潔なルールを設定します。内容は約款の要約とすることを推奨します。
+         * 新規登録前に表示する、サーバーの簡潔なルールを設定します。内容は利用約款の要約とすることを推奨します。
          */
         "description": string;
     };
