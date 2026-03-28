@@ -725,7 +725,7 @@ export interface Locale extends ILocale {
      */
     "cacheRemoteSensitiveFilesDescription": string;
     /**
-     * ボットとして設定
+     * ボット・モード
      */
     "flagAsBot": string;
     /**
