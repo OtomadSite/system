@@ -581,11 +581,11 @@ export interface Locale extends ILocale {
      */
     "deleteFile": string;
     /**
-     * センシティブとして設定
+     * センシティブ・ラベルを付ける
      */
     "markAsSensitive": string;
     /**
-     * センシティブを解除する
+     * センシティブ・ラベルを外す
      */
     "unmarkAsSensitive": string;
     /**
@@ -725,7 +725,7 @@ export interface Locale extends ILocale {
      */
     "cacheRemoteSensitiveFilesDescription": string;
     /**
-     * ボットとして設定
+     * ボット・モード
      */
     "flagAsBot": string;
     /**
@@ -3117,7 +3117,7 @@ export interface Locale extends ILocale {
      */
     "lockedAccountInfo": string;
     /**
-     * デフォルトでメディアをセンシティブ設定にする
+     * デフォルトでメディアにセンシティブ・フラグを付ける
      */
     "alwaysMarkSensitive": string;
     /**
@@ -4065,7 +4065,7 @@ export interface Locale extends ILocale {
      */
     "enableAutoSensitive": string;
     /**
-     * 利用可能な場合は、機械学習を利用して自動でメディアにセンシティブ・フラグを設定します。この機能をオフにしても、サーバーによっては自動で設定されることがあります。
+     * 利用可能な場合は、機械学習を利用して自動でメディアにセンシティブ・ラベルを付与します。この機能をオフにしても、サーバーによっては自動で設定されることがあります。
      */
     "enableAutoSensitiveDescription": string;
     /**
@@ -5337,11 +5337,11 @@ export interface Locale extends ILocale {
      */
     "reactAreYouSure": ParameterizedString<"emoji">;
     /**
-     * このメディアをセンシティブとして設定しますか？
+     * このメディアにセンシティブ・ラベルを付けますか？
      */
     "markAsSensitiveConfirm": string;
     /**
-     * このメディアのセンシティブ指定を解除しますか？
+     * このメディアのセンシティブ・ラベルを外しますか？
      */
     "unmarkAsSensitiveConfirm": string;
     /**
@@ -6754,7 +6754,7 @@ export interface Locale extends ILocale {
              */
             "title": string;
             /**
-             * サーバーのガイドラインにより必要とされる際や、そのまま見れる状態にしておくべきではない添付ファイルには、「センシティブ」設定を付けます。
+             * サーバーのガイドラインにより必要とされる際や、そのまま見れる状態にしておくべきではない添付ファイルには、「センシティブ・ラベル」を付けます。
              */
             "description": string;
             /**
@@ -6768,15 +6768,15 @@ export interface Locale extends ILocale {
                 "note": string;
             };
             /**
-             * 添付ファイルをセンシティブにする際は、そのファイルをクリックしてメニューを開き、「センシティブとして設定」をクリックします。
+             * 添付ファイルをセンシティブにする際は、そのファイルをクリックしてメニューを開き、「センシティブ・ラベルを付ける」をクリックします。
              */
             "method": string;
             /**
-             * ファイルを添付する際は、サーバーのガイドラインに従ってセンシティブを適切に設定してください。
+             * ファイルを添付する際は、サーバーのガイドラインに従ってセンシティブ・ラベルを適切に付与してください。
              */
             "sensitiveSucceeded": string;
             /**
-             * 画像をセンシティブに設定すると先に進めるようになります。
+             * 画像をセンシティブ・ラベルに付けると先に進めるようになります。
              */
             "doItToContinue": string;
         };
@@ -8110,7 +8110,7 @@ export interface Locale extends ILocale {
              */
             "maxFileSize_caption": string;
             /**
-             * ファイルにセンシティブを常に付与
+             * ファイルにセンシティブ・ラベルを常に付与
              */
             "alwaysMarkNsfw": string;
             /**
@@ -8319,7 +8319,7 @@ export interface Locale extends ILocale {
          */
         "sensitivityDescription": string;
         /**
-         * センシティブ・フラグを設定する
+         * センシティブ・ラベルを付与する
          */
         "setSensitiveFlagAutomatically": string;
         /**
@@ -8657,11 +8657,11 @@ export interface Locale extends ILocale {
     };
     "_displayOfSensitiveMedia": {
         /**
-         * センシティブ設定されたメディアを隠す
+         * センシティブなメディアを隠す
          */
         "respect": string;
         /**
-         * センシティブ設定されたメディアを隠さない
+         * センシティブなメディアを隠さない
          */
         "ignore": string;
         /**
@@ -11445,11 +11445,11 @@ export interface Locale extends ILocale {
          */
         "updateRemoteInstanceNote": string;
         /**
-         * ファイルをセンシティブ付与
+         * ファイルをセンシティブ・ラベル付与
          */
         "markSensitiveDriveFile": string;
         /**
-         * ファイルをセンシティブ解除
+         * ファイルをセンシティブ・ラベル解除
          */
         "unmarkSensitiveDriveFile": string;
         /**
